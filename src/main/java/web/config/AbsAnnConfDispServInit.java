@@ -5,13 +5,13 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 import javax.servlet.Filter;
 
-public class AppInit extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class AbsAnnConfDispServInit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     // Метод, указывающий на класс конфигурации
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class<?>[]{
-                WebConfig.class
+                SpringConfig.class
         };
     }
 
@@ -19,7 +19,7 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     @Override
     protected Class<?>[] getServletConfigClasses() {
         return new Class<?>[]{
-                WebConfig.class
+                SpringConfig.class
         };
     }
 
