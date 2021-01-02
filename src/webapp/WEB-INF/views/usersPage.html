@@ -3,20 +3,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Пользователи</title>
+    <title>Таблица пользователей</title>
 </head>
 <body>
 <table border="1">
     <thead>
-    <tr>Пользователи</tr>
+    <tr>Таблица пользователей</tr>
     </thead>
     <tbody>
     <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>lastname</th>
-        <th>age</th>
-        <th>changes</th>
+        <th>Номер </th>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Возраст</th>
+        <th>Изменить данные</th>
     </tr>
     <tr th:each="user : ${usersList}">
         <td th:text="${user.id}">Id</td>
@@ -25,13 +25,12 @@
         <td th:text="${user.age}">Age</td>
 
         <td>
-            <a th:href="@{'/edit/'+${user.id}}">edit</a>
-            <a th:href="@{'/delete/'+${user.id}}">delete</a>
+            <a th:href="@{'/edit/'+${user.id}}">редактировать</a>
+            <a th:href="@{'/delete/'+${user.id}}">удалить</a>
         </td>
     </tr>
     </tbody>
 </table>
-<h2>Add user</h2>
-<a th:href="@{'/add'}">Add new user</a>
+<a th:href="@{'/add'}">Добавить нового пользователя</a>
 </body>
 </html>
