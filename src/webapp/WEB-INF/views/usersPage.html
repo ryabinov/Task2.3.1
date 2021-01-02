@@ -25,7 +25,6 @@
         <td th:text="${user.age}">Age</td>
 
         <td>
-            <a th:href="@{'/add'}">Добавить</a>
             <a th:href="@{'/edit/'+${user.id}}">Редактировать</a>
             <a th:href="@{'/delete/'+${user.id}}">Удалить</a>
 
@@ -33,6 +32,6 @@
     </tr>
     </tbody>
 </table>
-
+<a th:href="@{'/add'}">Добавить пользователя</a>
 </body>
 </html>
