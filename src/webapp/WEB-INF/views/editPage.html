@@ -9,13 +9,13 @@
     <form th:action="@{/edit}" th:object="${user}" method="post">
         <p><input type="hidden" th:field="*{id}" /></p>
 
-        <p><label for="name">Имя</label></p>
+        <p><label for="name">Изменить имя:</label></p>
         <p><input type="text" th:field="*{name}" id="name" value="name" required></p>
 
-        <p><label for="lastname">Фамилия</label></p>
+        <p><label for="lastname">Изменить фамилию:</label></p>
         <p><input type="text" th:field="*{lastname}" id="lastname" value="lastname" required></p>
 
-        <p><label for="age">Возраст</label></p>
+        <p><label for="age">Изменить возраст:</label></p>
         <p><input type="number" th:field="*{age}" id="age" value="age" required></p>
 
         <p>
